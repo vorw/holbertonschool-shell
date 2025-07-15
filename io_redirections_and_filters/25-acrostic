@@ -1,2 +1,3 @@
 #!/bin/bash
 while read line; do printf "%s" "${line:0:1}"; done; echo
+
