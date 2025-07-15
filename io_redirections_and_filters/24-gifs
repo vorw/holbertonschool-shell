@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -name '*.gif' -exec sh -c 'for f; do n=${f##*/}; echo "${n%.gif}"; done' _ {} + | LC_ALL=C sort -f
+find . -type f -name '*.gif' | while read f; do f=${f##*/}; echo "${f%.gif}"; done | LC_ALL=C sort -f
